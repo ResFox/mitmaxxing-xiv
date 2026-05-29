@@ -6,7 +6,7 @@
     "AssemblyVersion": "1.0.0.1",
     "TestingAssemblyVersion": "1.0.0.1",
     "Punchline": "Are you even mitmaxxing, bro?",
-    "Description": "A clean mitigation overlay and death recap for FFXIV.\n\nTrack active physical and magical mitigation at a glance, see who used each cooldown in the Mit Tracker, and open a full Death Recap to review damage, shields, buffs, and overkill.",
+    "Description": "A clean mitigation and death recap overlay to see your mitigations in real time during fights.",
     "ApplicableVersion": "any",
     "DalamudApiLevel": 15,
     "RepoUrl": "https://github.com/ResFox/mitmaxxing-xiv",

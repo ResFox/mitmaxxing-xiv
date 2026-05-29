@@ -185,44 +185,31 @@ public sealed class Plugin : IDalamudPlugin
 
 
 
+        // Only /mx and /mxd are shown in the command list. Everything else is
+        // still functional but hidden (ShowInHelp = false) to keep it clean.
         CommandManager.AddHandler(Cmd, new CommandInfo(OnCommand)
-
         {
-
-            HelpMessage =
-
-                "Toggle overlay. " +
-
-                $"{Cmd} list   — toggle mit tracker.  " +
-
-                $"{Cmd} deaths — toggle death recap.  " +
-
-                $"{Cmd} config — settings.  " +
-
-                $"{Cmd} debug  — print status IDs to /xllog.  " +
-                $"{CmdOpenSettingsA} / {CmdOpenSettingsB} — open settings.  " +
-                $"{CmdOpenDeathsA} / {CmdOpenDeathsB} — open death recap."
-
-        });
-
-        CommandManager.AddHandler(CmdOpenSettingsA, new CommandInfo((_, _) => ToggleConfigUi())
-        {
-            HelpMessage = "Open Mitmaxxing settings."
+            ShowInHelp = false,
         });
 
         CommandManager.AddHandler(CmdOpenSettingsB, new CommandInfo((_, _) => ToggleConfigUi())
         {
-            HelpMessage = "Open Mitmaxxing settings."
+            HelpMessage = "Open settings",
         });
 
         CommandManager.AddHandler(CmdOpenDeathsA, new CommandInfo((_, _) => OpenDeathRecapWindow())
         {
-            HelpMessage = "Open Mitmaxxing death recap."
+            HelpMessage = "Opens death recap.",
+        });
+
+        CommandManager.AddHandler(CmdOpenSettingsA, new CommandInfo((_, _) => ToggleConfigUi())
+        {
+            ShowInHelp = false,
         });
 
         CommandManager.AddHandler(CmdOpenDeathsB, new CommandInfo((_, _) => OpenDeathRecapWindow())
         {
-            HelpMessage = "Open Mitmaxxing death recap."
+            ShowInHelp = false,
         });
 
 
