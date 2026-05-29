@@ -11,7 +11,7 @@ A Dalamud plugin for FFXIV that shows how hard your party is mitigating — and,
 Add this URL to your custom plugin repositories in `/xlsettings` → **Experimental** → **Custom Plugin Repositories**:
 
 ```
-https://raw.githubusercontent.com/ResFox/mitmaxxing/main/repo.json
+https://raw.githubusercontent.com/ResFox/mitmaxxing-xiv/main/repo.json
 ```
 
 Then open `/xlplugins`, search for **Mitmaxxing**, and install.

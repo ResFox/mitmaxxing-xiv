@@ -9,8 +9,8 @@
     "Description": "Mitigation overlay + party death recap.\n\nTrack the additive physical and magical damage reduction active on your target, see a detailed list of every mitigation in play (who cast it, time left, real multiplicative value), and get a full death recap showing exactly what hit you, how hard, what shields/buffs were up, and the overkill.",
     "ApplicableVersion": "any",
     "DalamudApiLevel": 15,
-    "RepoUrl": "https://github.com/ResFox/mitmaxxing",
-    "IconUrl": "https://raw.githubusercontent.com/ResFox/mitmaxxing/main/MitStack/images/icon.png",
+    "RepoUrl": "https://github.com/ResFox/mitmaxxing-xiv",
+    "IconUrl": "https://raw.githubusercontent.com/ResFox/mitmaxxing-xiv/main/MitStack/images/icon.png",
     "Tags": [
       "mitigation",
       "overlay",
@@ -22,8 +22,8 @@
       "utility",
       "combat"
     ],
-    "DownloadLinkInstall": "https://github.com/ResFox/mitmaxxing/raw/main/MitStack/bin/Release/MitStack/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ResFox/mitmaxxing/raw/main/MitStack/bin/Release/MitStack/latest.zip",
-    "DownloadLinkTesting": "https://github.com/ResFox/mitmaxxing/raw/main/MitStack/bin/Release/MitStack/latest.zip"
+    "DownloadLinkInstall": "https://github.com/ResFox/mitmaxxing-xiv/raw/main/MitStack/bin/Release/MitStack/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/ResFox/mitmaxxing-xiv/raw/main/MitStack/bin/Release/MitStack/latest.zip",
+    "DownloadLinkTesting": "https://github.com/ResFox/mitmaxxing-xiv/raw/main/MitStack/bin/Release/MitStack/latest.zip"
   }
 ]
