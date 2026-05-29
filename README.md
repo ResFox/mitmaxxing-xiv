@@ -32,6 +32,8 @@ Then open `/xlplugins`, search for **Mitmaxxing**, and install.
 | `/mitstack testdeath` | preview the recap with fake data |
 | `/mitstack config` | open settings |
 | `/mitstack debug` | print active status IDs to `/xllog` |
+| `/mitmax` or `/mx` | open settings directly |
+| `/mxd` or `/mitmaxxdeath` | open Death Recap directly |
 
 ## Credits / Inspirations
 

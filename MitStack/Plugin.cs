@@ -58,6 +58,10 @@ public sealed class Plugin : IDalamudPlugin
 
 
     private const string Cmd = "/mitstack";
+    private const string CmdOpenSettingsA = "/mitmax";
+    private const string CmdOpenSettingsB = "/mx";
+    private const string CmdOpenDeathsA   = "/mxd";
+    private const string CmdOpenDeathsB   = "/mitmaxxdeath";
 
 
 
@@ -195,8 +199,30 @@ public sealed class Plugin : IDalamudPlugin
 
                 $"{Cmd} config — settings.  " +
 
-                $"{Cmd} debug  — print status IDs to /xllog."
+                $"{Cmd} debug  — print status IDs to /xllog.  " +
+                $"{CmdOpenSettingsA} / {CmdOpenSettingsB} — open settings.  " +
+                $"{CmdOpenDeathsA} / {CmdOpenDeathsB} — open death recap."
 
+        });
+
+        CommandManager.AddHandler(CmdOpenSettingsA, new CommandInfo((_, _) => ToggleConfigUi())
+        {
+            HelpMessage = "Open Mitmaxxing settings."
+        });
+
+        CommandManager.AddHandler(CmdOpenSettingsB, new CommandInfo((_, _) => ToggleConfigUi())
+        {
+            HelpMessage = "Open Mitmaxxing settings."
+        });
+
+        CommandManager.AddHandler(CmdOpenDeathsA, new CommandInfo((_, _) => OpenDeathRecapWindow())
+        {
+            HelpMessage = "Open Mitmaxxing death recap."
+        });
+
+        CommandManager.AddHandler(CmdOpenDeathsB, new CommandInfo((_, _) => OpenDeathRecapWindow())
+        {
+            HelpMessage = "Open Mitmaxxing death recap."
         });
 
 
@@ -250,6 +276,10 @@ public sealed class Plugin : IDalamudPlugin
 
 
         CommandManager.RemoveHandler(Cmd);
+        CommandManager.RemoveHandler(CmdOpenSettingsA);
+        CommandManager.RemoveHandler(CmdOpenSettingsB);
+        CommandManager.RemoveHandler(CmdOpenDeathsA);
+        CommandManager.RemoveHandler(CmdOpenDeathsB);
 
     }
 

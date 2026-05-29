@@ -3,7 +3,7 @@
   "Name": "Mitmaxxing",
   "InternalName": "MitStack",
   "AssemblyVersion": "1.0.0.1",
-  "Description": "They told you to mit. You didn't mit. Now you're a stain on the arena floor and the healer is typing.\n\nMitmaxxing shows exactly how hard your party is (or isn't) mitigating, and when you inevitably explode, the death recap is right there to prove whose cooldown was on the bench. Looksmaxxing is out. Mitmaxxing is the only maxx that matters. Stack the mit. Touch the boss. Survive.\n\n/mitstack to start mitmaxxing.",
+  "Description": "A clean mitigation overlay and death recap for FFXIV.\n\nTrack active physical and magical mitigation at a glance, see who used each cooldown in the Mit Tracker, and open a full Death Recap to review damage, shields, buffs, and overkill.",
   "ApplicableVersion": "any",
   "RepoUrl": "https://github.com/ResFox/mitmaxxing-xiv",
   "Tags": [
