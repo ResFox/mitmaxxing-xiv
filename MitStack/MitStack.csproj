@@ -5,7 +5,7 @@
     <InternalName>MitStack</InternalName>
     <Description>Mitigation overlay + party death recap. Track active phys/magic damage reduction and see exactly how everyone dies.</Description>
     <Punchline>Are you even mitmaxxing, bro?</Punchline>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <RepoUrl>https://github.com/ResFox/mitmaxxing</RepoUrl>
     <Tags>mitigation;overlay;tank;raid;death recap</Tags>
     <CategoryTags>utility;combat</CategoryTags>
