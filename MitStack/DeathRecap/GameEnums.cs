@@ -1,0 +1,52 @@
+namespace MitStack.DeathRecap;
+
+internal enum ActionEffectType : byte
+{
+    Nothing                   = 0,
+    Miss                      = 1,
+    FullResist                = 2,
+    Damage                    = 3,
+    Heal                      = 4,
+    BlockedDamage             = 5,
+    ParriedDamage             = 6,
+    Invulnerable              = 7,
+    NoEffectText              = 8,
+    MpLoss                    = 10,
+    MpGain                    = 11,
+    TpLoss                    = 12,
+    TpGain                    = 13,
+    ApplyStatusEffectTarget   = 14,
+    ApplyStatusEffectSource   = 15,
+    RecoveredFromStatusEffect = 16,
+    LoseStatusEffectTarget    = 17,
+    LoseStatusEffectSource    = 18,
+    StatusNoEffect            = 20,
+    ThreatPosition            = 24,
+    EnmityAmountUp            = 25,
+    EnmityAmountDown          = 26,
+    StartActionCombo          = 27,
+    Knockback                 = 32,
+    Mount                     = 40,
+    FullResistStatus          = 55,
+    Vfx                       = 59,
+    Gauge                     = 60,
+    PartialInvulnerable       = 74,
+    Interrupt                 = 75,
+}
+
+internal enum ActorControlCategory : uint
+{
+    Death           = 0x6,
+    CancelAbility   = 0xF,
+    GainEffect      = 0x14,
+    LoseEffect      = 0x15,
+    UpdateEffect    = 0x16,
+    TargetIcon      = 0x22,
+    Tether          = 0x23,
+    Targetable      = 0x36,
+    DirectorUpdate  = 0x6D,
+    SetTargetSign   = 0x1F6,
+    LimitBreak      = 0x1F9,
+    HoT             = 0x604,
+    DoT             = 0x605,
+}

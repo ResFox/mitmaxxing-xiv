@@ -1,0 +1,29 @@
+[
+  {
+    "Author": "Res",
+    "Name": "Mitmaxxing",
+    "InternalName": "MitStack",
+    "AssemblyVersion": "1.0.0.0",
+    "TestingAssemblyVersion": "1.0.0.0",
+    "Punchline": "Are you even mitmaxxing, bro?",
+    "Description": "Mitigation overlay + party death recap.\n\nTrack the additive physical and magical damage reduction active on your target, see a detailed list of every mitigation in play (who cast it, time left, real multiplicative value), and get a full death recap showing exactly what hit you, how hard, what shields/buffs were up, and the overkill.",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 15,
+    "RepoUrl": "https://github.com/ResFox/mitmaxxing",
+    "IconUrl": "https://raw.githubusercontent.com/ResFox/mitmaxxing/main/MitStack/images/icon.png",
+    "Tags": [
+      "mitigation",
+      "overlay",
+      "tank",
+      "raid",
+      "death recap"
+    ],
+    "CategoryTags": [
+      "utility",
+      "combat"
+    ],
+    "DownloadLinkInstall": "https://github.com/ResFox/mitmaxxing/raw/main/MitStack/bin/Release/MitStack/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/ResFox/mitmaxxing/raw/main/MitStack/bin/Release/MitStack/latest.zip",
+    "DownloadLinkTesting": "https://github.com/ResFox/mitmaxxing/raw/main/MitStack/bin/Release/MitStack/latest.zip"
+  }
+]

@@ -1,0 +1,39 @@
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <Author>Res</Author>
+    <Name>Mitmaxxing</Name>
+    <InternalName>MitStack</InternalName>
+    <Description>Mitigation overlay + party death recap. Track active phys/magic damage reduction and see exactly how everyone dies.</Description>
+    <Punchline>Are you even mitmaxxing, bro?</Punchline>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <RepoUrl>https://github.com/ResFox/mitmaxxing</RepoUrl>
+    <Tags>mitigation;overlay;tank;raid;death recap</Tags>
+    <CategoryTags>utility;combat</CategoryTags>
+    <IconPath>images/icon.png</IconPath>
+    <DalamudApiLevel>15</DalamudApiLevel>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="images\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!-- Mirror build output to the non-x64 path Dalamud's dev-plugin location
+       was originally configured for, so the user doesn't have to update
+       the path in /xlsettings every time. Idempotent + cheap. -->
+  <Target Name="MirrorToLegacyOutputPath" AfterTargets="Build">
+    <PropertyGroup>
+      <LegacyOutDir>$(MSBuildProjectDirectory)\bin\$(Configuration)\</LegacyOutDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(LegacyOutDir)" />
+    <ItemGroup>
+      <_MirrorFiles Include="$(OutputPath)**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MirrorFiles)"
+          DestinationFiles="@(_MirrorFiles->'$(LegacyOutDir)%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+  </Target>
+</Project>

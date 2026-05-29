@@ -1,0 +1,25 @@
+{
+  "Author": "Res",
+  "Name": "Mitmaxxing",
+  "InternalName": "MitStack",
+  "AssemblyVersion": "1.0.0.0",
+  "Description": "They told you to mit. You didn't mit. Now you're a stain on the arena floor and the healer is typing.\n\nMitmaxxing shows exactly how hard your party is (or isn't) mitigating, and when you inevitably explode, the death recap is right there to prove whose cooldown was on the bench. Looksmaxxing is out. Mitmaxxing is the only maxx that matters. Stack the mit. Touch the boss. Survive.\n\n/mitstack to start mitmaxxing.",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/yourname/MitStack",
+  "Tags": [
+    "mitigation",
+    "overlay",
+    "tank",
+    "raid",
+    "debuff",
+    "death recap"
+  ],
+  "DalamudApiLevel": 15,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "IconUrl": "https://raw.githubusercontent.com/yourname/MitStack/main/icon.png",
+  "Punchline": "Are you even mitmaxxing, bro?",
+  "AcceptsFeedback": true
+}
