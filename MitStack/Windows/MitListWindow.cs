@@ -12,7 +12,7 @@ using Dalamud.Bindings.ImGui;
 namespace MitStack.Windows;
 
 /// <summary>
-/// The main MitStack window — a polished, raid-leader-friendly active-mit tracker.
+/// The main Mitmaxxing window — a polished, raid-leader-friendly active-mit tracker.
 ///
 /// Features:
 ///  • Big summary header with phys + mag percentages and a danger meter.
@@ -90,7 +90,7 @@ public class MitListWindow : Window, IDisposable
         ImGui.TextColored(col, text);
     }
 
-    public MitListWindow(Plugin plugin) : base("MitStack — Mit Tracker###MitStackList2")
+    public MitListWindow(Plugin plugin) : base("Mitmaxxing — Mit Tracker###MitStackList2")
     {
         _plugin = plugin;
 

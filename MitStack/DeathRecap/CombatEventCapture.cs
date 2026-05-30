@@ -105,7 +105,7 @@ public class CombatEventCapture : IDisposable
     public void ClearHistory() => Deaths.Clear();
 
     // Injects a synthetic death so the recap layout can be previewed without
-    // actually dying. Wired to "/mitstack testdeath".
+    // actually dying. Wired to "/mitmaxxing testdeath".
     public void InjectTestDeath()
     {
         var now    = DateTime.Now;

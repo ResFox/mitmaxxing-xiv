@@ -18,7 +18,7 @@ public class DeathPopupWindow : Window, IDisposable
     private static readonly Vector4 ColAccent = new(1.00f, 0.85f, 0.10f, 1f);
 
     public DeathPopupWindow(Plugin plugin)
-        : base("MitStack — Death###MitStackDeathPopup",
+        : base("Mitmaxxing — Death###MitStackDeathPopup",
                ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar |
                ImGuiWindowFlags.AlwaysAutoResize)
     {

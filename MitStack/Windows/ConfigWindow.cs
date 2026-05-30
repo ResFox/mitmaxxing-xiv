@@ -9,7 +9,7 @@ public class ConfigWindow : Window, IDisposable
 {
     private readonly Plugin _plugin;
 
-    public ConfigWindow(Plugin plugin) : base("MitStack Settings###MitStackConfig")
+    public ConfigWindow(Plugin plugin) : base("Mitmaxxing Settings###MitStackConfig")
     {
         _plugin = plugin;
         SizeConstraints = new WindowSizeConstraints
@@ -255,12 +255,12 @@ public class ConfigWindow : Window, IDisposable
 
         // ─── Commands cheat sheet ──────────────────────────────────────────
         SectionHeader("Commands");
-        ImGui.BulletText("/mitstack           — toggle the 2-icon overlay");
-        ImGui.BulletText("/mitstack list      — toggle the Mit Tracker");
-        ImGui.BulletText("/mitstack deaths    — toggle Death Recap");
-        ImGui.BulletText("/mitstack testdeath — preview the recap with fake data");
-        ImGui.BulletText("/mitstack config    — open this window");
-        ImGui.BulletText("/mitstack debug     — print all status IDs to /xllog");
+        ImGui.BulletText("/mitmaxxing           — toggle the 2-icon overlay");
+        ImGui.BulletText("/mitmaxxing list      — toggle the Mit Tracker");
+        ImGui.BulletText("/mitmaxxing deaths    — toggle Death Recap");
+        ImGui.BulletText("/mitmaxxing testdeath — preview the recap with fake data");
+        ImGui.BulletText("/mitmaxxing config    — open this window");
+        ImGui.BulletText("/mitmaxxing debug     — print all status IDs to /xllog");
 
         ImGui.Spacing();
         SectionHeader("Maintenance");
@@ -274,7 +274,7 @@ public class ConfigWindow : Window, IDisposable
         {
             if (popup)
             {
-                ImGui.Text("Reset every MitStack setting to defaults?");
+                ImGui.Text("Reset every Mitmaxxing setting to defaults?");
                 if (ImGui.Button("Yes, reset"))
                 {
                     _plugin.ResetConfiguration();

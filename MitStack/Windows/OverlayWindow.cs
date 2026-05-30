@@ -39,7 +39,7 @@ public class OverlayWindow : Window, IDisposable
         ImGuiWindowFlags.NoResize   |
         ImGuiWindowFlags.NoInputs;   // click-through when locked
 
-    public OverlayWindow(Plugin plugin) : base("MitStack##overlay")
+    public OverlayWindow(Plugin plugin) : base("Mitmaxxing##overlay")
     {
         _plugin = plugin;
         IsOpen  = true;
@@ -249,6 +249,6 @@ public class OverlayWindow : Window, IDisposable
         }
 
         ImGui.Separator();
-        ImGui.TextDisabled("/mitstack list — full Mit Tracker");
+        ImGui.TextDisabled("/mitmaxxing list — full Mit Tracker");
     }
 }

@@ -70,7 +70,7 @@ public record MitigationEntry(
 /// HOW TO VERIFY A STATUS ID IN-GAME
 /// ════════════════════════════════════════════════════════════════════
 /// 1. Load the plugin, target a training dummy (or a real boss).
-/// 2. Type /mitstack debug  →  all active status IDs print to /xllog.
+/// 2. Type /mitmaxxing debug  →  all active status IDs print to /xllog.
 /// 3. Use the local player debug section to find your own buffs.
 ///
 /// ════════════════════════════════════════════════════════════════════

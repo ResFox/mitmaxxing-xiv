@@ -26,12 +26,12 @@ Then open `/xlplugins`, search for **Mitmaxxing**, and install.
 
 | Command | Action |
 | --- | --- |
-| `/mitstack` | toggle the 2-icon overlay |
-| `/mitstack list` | toggle the Mit Tracker |
-| `/mitstack deaths` | toggle the Death Recap |
-| `/mitstack testdeath` | preview the recap with fake data |
-| `/mitstack config` | open settings |
-| `/mitstack debug` | print active status IDs to `/xllog` |
+| `/mitmaxxing` | toggle the 2-icon overlay |
+| `/mitmaxxing list` | toggle the Mit Tracker |
+| `/mitmaxxing deaths` | toggle the Death Recap |
+| `/mitmaxxing testdeath` | preview the recap with fake data |
+| `/mitmaxxing config` | open settings |
+| `/mitmaxxing debug` | print active status IDs to `/xllog` |
 | `/mitmax` or `/mx` | open settings directly |
 | `/mxd` or `/mitmaxxdeath` | open Death Recap directly |
 

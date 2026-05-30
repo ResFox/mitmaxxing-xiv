@@ -19,7 +19,7 @@ public class DeathRecapWindow : Window, IDisposable
 
     private int _selectedDeath = 0;
 
-    // MitStack palette
+    // Mitmaxxing palette
     private static readonly Vector4 ColPhys     = new(1.00f, 0.55f, 0.30f, 1f);
     private static readonly Vector4 ColMagic    = new(0.55f, 0.70f, 1.00f, 1f);
     private static readonly Vector4 ColHeal     = new(0.45f, 0.95f, 0.50f, 1f);
@@ -32,7 +32,7 @@ public class DeathRecapWindow : Window, IDisposable
     private static readonly Vector4 ColHealOver = new(0.15f, 0.80f, 0.30f, 0.45f);
 
     public DeathRecapWindow(Plugin plugin)
-        : base("MitStack — Death Recap###MitStackDeathRecap2")
+        : base("Mitmaxxing — Death Recap###MitStackDeathRecap2")
     {
         _plugin = plugin;
         Size = new Vector2(820, 480);

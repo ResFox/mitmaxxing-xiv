@@ -1,9 +1,13 @@
+## Editor / tooling
+.cursor/
+.vs/
+.idea/
+*.user
+*.suo
+
 ## Build output
 bin/
 obj/
-.vs/
-*.user
-*.suo
 
 ## Keep the packaged release so the repo download links resolve
 !MitStack/bin/

@@ -57,7 +57,8 @@ public sealed class Plugin : IDalamudPlugin
 
 
 
-    private const string Cmd = "/mitstack";
+    private const string Cmd = "/mitmaxxing";
+    private const string CmdLegacy = "/mitstack";
     private const string CmdOpenSettingsA = "/mitmax";
     private const string CmdOpenSettingsB = "/mx";
     private const string CmdOpenDeathsA   = "/mxd";
@@ -167,7 +168,7 @@ public sealed class Plugin : IDalamudPlugin
 
         ListWindow       = new MitListWindow(this) { IsOpen = Configuration.ListWindowOpen };
 
-        DeathRecapWindow = new DeathRecapWindow(this) { IsOpen = Configuration.DeathRecapWindowOpen };
+        DeathRecapWindow = new DeathRecapWindow(this) { IsOpen = false };
 
         DeathPopup       = new DeathPopupWindow(this);
 
@@ -185,9 +186,13 @@ public sealed class Plugin : IDalamudPlugin
 
 
 
-        // Only /mx and /mxd are shown in the command list. Everything else is
-        // still functional but hidden (ShowInHelp = false) to keep it clean.
+
         CommandManager.AddHandler(Cmd, new CommandInfo(OnCommand)
+        {
+            ShowInHelp = false,
+        });
+
+        CommandManager.AddHandler(CmdLegacy, new CommandInfo(OnCommand)
         {
             ShowInHelp = false,
         });
@@ -263,6 +268,7 @@ public sealed class Plugin : IDalamudPlugin
 
 
         CommandManager.RemoveHandler(Cmd);
+        CommandManager.RemoveHandler(CmdLegacy);
         CommandManager.RemoveHandler(CmdOpenSettingsA);
         CommandManager.RemoveHandler(CmdOpenSettingsB);
         CommandManager.RemoveHandler(CmdOpenDeathsA);
@@ -299,7 +305,7 @@ public sealed class Plugin : IDalamudPlugin
 
         // ── Death recap (independent of the mit-display visibility filter) ──
         try { CombatCapture.Update(bossBc); }
-        catch (Exception ex) { Log.Debug($"[MitStack] CombatCapture.Update error: {ex.Message}"); }
+        catch (Exception ex) { Log.Debug($"[Mitmaxxing] CombatCapture.Update error: {ex.Message}"); }
 
         if ((DateTime.Now - _lastClean).TotalSeconds >= 5)
         {
@@ -423,7 +429,7 @@ public sealed class Plugin : IDalamudPlugin
 
     {
 
-        Log.Information("[MitStack] ── Death recap hook status ──");
+        Log.Information("[Mitmaxxing] ── Death recap hook status ──");
         Log.Information($"  DeathRecapEnabled = {Configuration.DeathRecapEnabled}");
         Log.Information($"  OnlyInDuty        = {Configuration.DeathRecapOnlyInDuty}  (IsDutyStarted={DutyState.IsDutyStarted})");
         Log.Information($"  ActionEffect hook = {CombatCapture.ActionEffectInstalled}");
@@ -443,7 +449,7 @@ public sealed class Plugin : IDalamudPlugin
 
         {
 
-            Log.Information($"[MitStack] ── Statuses on TARGET '{boss.Name}' ──");
+            Log.Information($"[Mitmaxxing] ── Statuses on TARGET '{boss.Name}' ──");
 
             PrintStatusList(boss.StatusList);
 
@@ -453,7 +459,7 @@ public sealed class Plugin : IDalamudPlugin
 
         {
 
-            Log.Information("[MitStack] No battle target selected.");
+            Log.Information("[Mitmaxxing] No battle target selected.");
 
         }
 
@@ -465,7 +471,7 @@ public sealed class Plugin : IDalamudPlugin
 
         {
 
-            Log.Information($"[MitStack] ── Statuses on LOCAL PLAYER '{local.Name}' ──");
+            Log.Information($"[Mitmaxxing] ── Statuses on LOCAL PLAYER '{local.Name}' ──");
 
             PrintStatusList(local.StatusList);
 
@@ -473,7 +479,7 @@ public sealed class Plugin : IDalamudPlugin
 
 
 
-        Log.Information("[MitStack] ── End — open /xllog ──");
+        Log.Information("[Mitmaxxing] ── End — open /xllog ──");
 
     }
 
